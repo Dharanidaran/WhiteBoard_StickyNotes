@@ -1,0 +1,99 @@
+// _whiteboard.scss
+
+.whiteboard{
+
+	background: #fff;
+	border: 15px solid #888;
+	position:absolute;
+	width: 100%;
+	min-width: 250px;
+	min-height: 250px;
+	height: 100%;
+
+	.sticky{
+		position: absolute;
+		top:0;
+		left: 2em;
+		i.addSticky{
+			font-size: 2em;	
+			color: #888;
+			
+		}
+		padding: 1em;
+		background: #334;
+		border-bottom-left-radius: 100%;  /* 100px of height + 10px of border */
+    	border-bottom-right-radius: 100%; /* 100px of height + 10px of border */
+	}
+
+
+}
+
+
+
+
+	.note{
+		
+		display: block;
+		position: absolute;
+		z-index: 1;
+		@include centered;
+		max-width: 500px;
+		max-height: 500px;
+		min-width: 100px;
+		min-height: 100px;	
+		padding:0.5em;
+		@include box-shadow(black 1px 1px 5px);
+		border-radius: 5px;
+		.page{
+			position: relative;
+			
+			background:#FFA3CE;
+			h1 {
+				font-family: $header-font;
+				font-weight:bold;
+				font-size: 1.5em;
+
+				padding :0.25em;
+				display: block;
+				border-bottom : 1px solid #000;
+				text-align: center;
+			}
+			.content{
+				padding:0.5em;
+				text-align: center;
+				font-family: $notes-font;
+				font-weight: bold;
+			}
+		}
+		
+	}
+
+	.note.active{
+			@include box-shadow(black 3px 2px 20px);
+			z-index: 5;
+
+
+
+	}
+
+	.controls{
+		position: relative;
+		@include clearfix;
+		float:right;
+
+		border: 1px solid #000;
+		padding:0.25em;
+
+		i{
+
+			height: 25px;
+			display: block;
+			padding-bottom: 0.25em;
+		}
+		width: 10%;
+		height: 100px;
+	}
+
+
+	
+
