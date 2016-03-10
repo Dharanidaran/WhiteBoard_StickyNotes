@@ -30,10 +30,7 @@
 
 })(jQuery,'smartresize');
 
-
-
 ////////Custom code ///////////
-
 	counter=1000;
 	// Create a function Object
 	function StickyNote(element){
@@ -168,9 +165,7 @@
 
 					$(".colorElement").click(function(e){
 						e.stopPropagation();
-						var colorClicked =$(this).css("backgroundColor");
-						console.log(colorClicked);
-
+						var colorClicked =$(this).css("backgroundColor");						
 						$(this).closest('.stickynote').css('background-color', colorClicked);
 					})
 

@@ -59,7 +59,7 @@ table {
 /* line 6, sass/_whiteboard.scss */
 #whiteboard {
   background: #fff;
-  border: 15px solid #777;
+  border: 25px solid #777;
   position: absolute;
   width: 100%;
   min-width: 250px;
@@ -72,10 +72,10 @@ table {
   position: absolute;
   width: 6em;
   height: 6em;
-  top: -2em;
+  top: -2.25em;
   left: 4em;
   padding: 1em;
-  background: #334;
+  background: #AB4153;
   border-radius: 50%;
   /* 100px of height + 10px of border */
   border-radius: 50%;
@@ -87,9 +87,11 @@ table {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2em; }
+    padding-top: 0.5em;
+    font-size: 2em;
+    color: #555; }
 
-/* line 39, sass/_whiteboard.scss */
+/* line 41, sass/_whiteboard.scss */
 .stickynote {
   display: block;
   position: absolute;
@@ -112,14 +114,14 @@ table {
   background: #FFA3CE;
   font-family: "Leckerli One", cursive; }
 
-/* line 62, sass/_whiteboard.scss */
+/* line 64, sass/_whiteboard.scss */
 .stickynote.active {
   -moz-box-shadow: black 3px 3px 20px;
   -webkit-box-shadow: black 3px 3px 20px;
   box-shadow: black 3px 3px 20px;
   z-index: 2;
   padding-right: 45px; }
-  /* line 67, sass/_whiteboard.scss */
+  /* line 69, sass/_whiteboard.scss */
   .stickynote.active .control {
     display: block;
     width: 40px;
@@ -130,7 +132,7 @@ table {
     background: #333;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px; }
-  /* line 80, sass/_whiteboard.scss */
+  /* line 82, sass/_whiteboard.scss */
   .stickynote.active .controlElement {
     width: 36px;
     height: 36px;
@@ -139,26 +141,26 @@ table {
     cursor: pointer;
     border-bottom: 1px dotted #888;
     margin: 1px 2px; }
-  /* line 93, sass/_whiteboard.scss */
+  /* line 95, sass/_whiteboard.scss */
   .stickynote.active .delete {
     display: inline-block;
     text-align-last: center;
     line-height: 40px; }
-    /* line 97, sass/_whiteboard.scss */
+    /* line 99, sass/_whiteboard.scss */
     .stickynote.active .delete:before {
       content: "\f1f8";
-      color: white;
+      color: #AB233E;
       cursor: pointer;
       padding: 0.25em;
       font-size: 1.5em; }
-  /* line 106, sass/_whiteboard.scss */
+  /* line 108, sass/_whiteboard.scss */
   .stickynote.active .colorElement {
     border-radius: 50%;
     background: white; }
-    /* line 109, sass/_whiteboard.scss */
+    /* line 111, sass/_whiteboard.scss */
     .stickynote.active .colorElement:before {
       content: " "; }
 
-/* line 116, sass/_whiteboard.scss */
+/* line 118, sass/_whiteboard.scss */
 .control {
   display: none; }

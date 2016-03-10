@@ -6,7 +6,7 @@
 #whiteboard{
 	
 	background:#fff;
-	border: 15px solid #777;
+	border: 25px solid #777;
 	position:absolute;
 	width: 100%;
 	min-width: 250px;
@@ -20,17 +20,19 @@
 		position: absolute;
 		width:6em;
 		height:6em;
-		top:-2em;
+		top:-2.25em;
 		left:4em;
 		padding: 1em;
-		background: #334;
+		background:#AB4153;
 		border-radius:50%;  /* 100px of height + 10px of border */
     	border-radius:50%; /* 100px of height + 10px of border */
 		
 		.fa{
 			position: absolute;
 			@include centered;
+			padding-top: 0.5em;
 			font-size: 2em;
+			color: #555;
 		}
 
 	}
@@ -96,7 +98,7 @@
 		line-height: 40px;
 		&:before{
 		content:"\f1f8";
-		color:white;
+		color:#AB233E;
 		cursor: pointer;
 		padding:0.25em;
 		font-size: 1.5em;
