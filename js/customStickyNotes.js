@@ -32,7 +32,7 @@
 
 
 
-
+////////Custom code ///////////
 
 	counter=1000;
 	// Create a function Object
@@ -69,7 +69,9 @@
 			// usage:
 			$(window).smartresize(function(){
 			  // code that takes it easy...
-			  console.log(this);
+			  	$(".stickynote").draggable({
+			  		containment:[ 75,75,window.innerWidth-75, window.innerHeight-75],
+			  	})
 			});
 
 
