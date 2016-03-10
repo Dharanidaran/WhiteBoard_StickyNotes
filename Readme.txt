@@ -6,5 +6,5 @@ Click the color button to change color.
 
 Click the sticky note to activate controls.
 
-The sticky note can be edited, deleted and dragged within a contrained frame boundry.
+The sticky note can be edited, deleted and dragged within a contrained frame boundary.
 
