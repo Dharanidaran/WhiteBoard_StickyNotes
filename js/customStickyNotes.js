@@ -85,8 +85,8 @@
 			//Function to create a single note
 			var div = document.createElement("div");
 				div.setAttribute("id",id);
-				//div.setAttribute("contenteditable", "true");
-			var contentText = document.createTextNode("");
+				div.setAttribute("contenteditable", "true");
+			var contentText = document.createTextNode(" ");
 				div.appendChild(contentText);
 				classie.add(div,"stickynote");
 			var control = document.createElement("div");
