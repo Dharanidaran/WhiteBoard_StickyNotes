@@ -112,16 +112,17 @@ table {
   overflow-x: visible;
   overflow-y: hidden;
   background: #FFA3CE;
-  font-family: "Leckerli One", cursive; }
+  font-family: "Leckerli One", cursive;
+  outline: none; }
 
-/* line 64, sass/_whiteboard.scss */
+/* line 65, sass/_whiteboard.scss */
 .stickynote.active {
   -moz-box-shadow: black 3px 3px 20px;
   -webkit-box-shadow: black 3px 3px 20px;
   box-shadow: black 3px 3px 20px;
   z-index: 2;
   padding-right: 45px; }
-  /* line 69, sass/_whiteboard.scss */
+  /* line 70, sass/_whiteboard.scss */
   .stickynote.active .control {
     display: block;
     width: 40px;
@@ -132,7 +133,7 @@ table {
     background: #333;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px; }
-  /* line 82, sass/_whiteboard.scss */
+  /* line 84, sass/_whiteboard.scss */
   .stickynote.active .controlElement {
     width: 36px;
     height: 36px;
@@ -141,26 +142,26 @@ table {
     cursor: pointer;
     border-bottom: 1px dotted #888;
     margin: 1px 2px; }
-  /* line 95, sass/_whiteboard.scss */
+  /* line 97, sass/_whiteboard.scss */
   .stickynote.active .delete {
     display: inline-block;
     text-align-last: center;
     line-height: 40px; }
-    /* line 99, sass/_whiteboard.scss */
+    /* line 101, sass/_whiteboard.scss */
     .stickynote.active .delete:before {
       content: "\f1f8";
       color: #AB233E;
       cursor: pointer;
       padding: 0.25em;
       font-size: 1.5em; }
-  /* line 108, sass/_whiteboard.scss */
+  /* line 110, sass/_whiteboard.scss */
   .stickynote.active .colorElement {
     border-radius: 50%;
     background: white; }
-    /* line 111, sass/_whiteboard.scss */
+    /* line 113, sass/_whiteboard.scss */
     .stickynote.active .colorElement:before {
       content: " "; }
 
-/* line 118, sass/_whiteboard.scss */
+/* line 120, sass/_whiteboard.scss */
 .control {
   display: none; }
