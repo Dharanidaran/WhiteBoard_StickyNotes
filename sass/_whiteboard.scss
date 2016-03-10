@@ -1,116 +1,255 @@
-// _whiteboard.scss
+// // _whiteboard.scss
 
-.whiteboard{
 
-	background: #fff;
-	border: 15px solid #888;
+
+
+#whiteboard{
+	
+	background:#fff;
+	border: 15px solid #777;
 	position:absolute;
 	width: 100%;
 	min-width: 250px;
 	min-height: 250px;
 	height: 100%;
+	overflow: hidden;
 
-	.sticky{
+}
+
+#addNote{
 		position: absolute;
-		top:0;
-		left: 2em;
-		i.addSticky{
-			font-size: 2em;	
-			color: #888;
-			cursor: pointer;
-			
-		}
+		width:6em;
+		height:6em;
+		top:-2em;
+		left:4em;
 		padding: 1em;
 		background: #334;
-		border-bottom-left-radius: 100%;  /* 100px of height + 10px of border */
-    	border-bottom-right-radius: 100%; /* 100px of height + 10px of border */
+		border-radius:50%;  /* 100px of height + 10px of border */
+    	border-radius:50%; /* 100px of height + 10px of border */
 		
+		.fa{
+			position: absolute;
+			@include centered;
+			font-size: 2em;
+		}
 
 	}
 
 
-}
+.stickynote{
 
-
-
-
-	.note{
-		
 		display: block;
 		position: absolute;
 		z-index: 1;
 		@include centered;
 		max-width: 300px;
 		max-height: 300px;
-		min-width: 100px;
-		min-height: 100px;	
+
+		min-width: 150px;
+		min-height: 160px;	
+
 		padding:0.5em;
 		@include box-shadow(black 1px 1px 5px);
 		border-radius: 5px;
-		.page{
-			position: relative;
-			
-			background:#FFA3CE;
-			h1 {
-				font-family: $header-font;
-				font-weight:bold;
-				font-size: 1.5em;
+		overflow-x:visible;
+		overflow-y:hidden;
+		background:#FFA3CE;
+		font-family: $notes-font1;
 
-				padding :0.25em;
-				display: block;
-				border-bottom : 1px solid #000;
-				text-align: center;
-			}
-			.content{
-				padding:0.5em;
-				text-align: center;
-				font-family: $notes-font;
-				font-weight: bold;
-			}
-		}
-		
-	}
 
-	.note.active{
-			@include box-shadow(black 3px 2px 20px);
-			z-index: 5;
+}
 
-	}
+.stickynote.active{
+	@include box-shadow(black 3px 3px 20px);
+	z-index: 2;
+	padding-right: 45px;
 
-	.note1{
+	.control{
+		display:block;
+		width: 40px;
+		height:160px;
 		position: absolute;
-		top: 20px;
-		right: 20px;
-		max-width: 500px;
-		max-height: 500px;
-		min-width: 100px;
-		min-height: 100px;	
-		padding:0.5em;
-		@include box-shadow(black 1px 1px 5px);
-		border-radius: 5px;
-		.page{
-			position: relative;
-			
-			background:#FFA3CE;
-			h1 {
-				font-family: $header-font;
-				font-weight:bold;
-				font-size: 1.5em;
-
-				padding :0.25em;
-				display: block;
-				border-bottom : 1px solid #000;
-				text-align: center;
-			}
-			.content{
-				padding:0.5em;
-				text-align: center;
-				font-family: $notes-font;
-				font-weight: bold;
-			}
-		}
+		top:0;
+		right:0;
+		background: #333;
+		border-bottom-left-radius:5px;
+		border-top-left-radius:5px;
 
 	}
+
+	.controlElement{
+		width: 36px;
+		height: 36px;
+		overflow: hidden;
+		font-family: FontAwesome;
+		cursor : pointer;
+		border-bottom:1px dotted #888;
+		margin: 1px 2px;
+
+
+
+	}
+
+	.delete{
+		display: inline-block;
+		text-align-last: center;
+		line-height: 40px;
+		&:before{
+		content:"\f1f8";
+		color:white;
+		cursor: pointer;
+		padding:0.25em;
+		font-size: 1.5em;
+		}
+	}
+
+	.colorElement{
+		border-radius:50%;
+		background:white;
+		&:before{
+		content:" ";
+
+		}
+	}
+}
+
+.control{
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #whiteboard{
+
+// 	background: #fff;
+// 	border: 15px solid #888;
+// 	position:absolute;
+// 	width: 100%;
+// 	min-width: 250px;
+// 	min-height: 250px;
+// 	height: 100%;
+
+// 	.sticky{
+// 		position: absolute;
+// 		top:0;
+// 		left: 2em;
+// 		i.addSticky{
+// 			font-size: 2em;	
+// 			color: #888;
+// 			cursor: pointer;
+			
+// 		}
+// 		padding: 1em;
+// 		background: #334;
+// 		border-bottom-left-radius: 100%;  /* 100px of height + 10px of border */
+//     	border-bottom-right-radius: 100%; /* 100px of height + 10px of border */
+		
+
+// 	}
+
+
+// }
+
+
+// 	.note{
+		
+// 		display: block;
+// 		position: absolute;
+// 		z-index: 1;
+// 		@include centered;
+// 		max-width: 300px;
+// 		max-height: 300px;
+// 		min-width: 100px;
+// 		min-height: 100px;	
+// 		padding:0.5em;
+// 		@include box-shadow(black 1px 1px 5px);
+// 		border-radius: 5px;
+// 		.page{
+// 			position: relative;
+			
+// 			background:#FFA3CE;
+// 			h1 {
+
+// 				font-family: $header-font;
+// 				font-weight:bold;
+// 				font-size: 1.5em;
+
+// 				padding :0.25em;
+// 				display: block;
+// 				border-bottom : 1px solid #000;
+// 				text-align: center;
+// 			}
+// 			.content{
+// 				padding:0.5em;
+// 				text-align: center;
+// 				font-family: $notes-font;
+// 				font-weight: bold;
+// 			}
+// 		}
+		
+// 	}
+
+// 	.note.active{
+// 			@include box-shadow(black 3px 2px 20px);
+// 			z-index: 5;
+
+// 	}
+
+// 	.note1{
+// 		position: absolute;
+// 		top: 20px;
+// 		right: 20px;
+// 		max-width: 500px;
+// 		max-height: 500px;
+// 		min-width: 100px;
+// 		min-height: 100px;	
+// 		padding:0.5em;
+// 		@include box-shadow(black 1px 1px 5px);
+// 		border-radius: 5px;
+// 		.page{
+// 			position: relative;
+			
+// 			background:#FFA3CE;
+// 			h1 {
+// 				font-family: $header-font;
+// 				font-weight:bold;
+// 				font-size: 1.5em;
+
+// 				padding :0.25em;
+// 				display: block;
+// 				border-bottom : 1px solid #000;
+// 				text-align: center;
+// 			}
+// 			.content{
+// 				padding:0.5em;
+// 				text-align: center;
+// 				font-family: $notes-font;
+// 				font-weight: bold;
+// 			}
+// 		}
+
+// 	}
 
 
 	

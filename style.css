@@ -1,6 +1,5 @@
 /*General Settings  Border Box*/
-@import url(https://fonts.googleapis.com/css?family=Satisfy|Loved+by+the+King);
-@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint|Leckerli+One);
 /* line 5, sass/style.scss */
 *,
 *:after,
@@ -57,34 +56,41 @@ table {
   border-spacing: 0; }
 
 /*Compass Imports */
-/* line 3, sass/_whiteboard.scss */
-.whiteboard {
+/* line 6, sass/_whiteboard.scss */
+#whiteboard {
   background: #fff;
-  border: 15px solid #888;
+  border: 15px solid #777;
   position: absolute;
   width: 100%;
   min-width: 250px;
   min-height: 250px;
-  height: 100%; }
-  /* line 13, sass/_whiteboard.scss */
-  .whiteboard .sticky {
-    position: absolute;
-    top: 0;
-    left: 2em;
-    padding: 1em;
-    background: #334;
-    border-bottom-left-radius: 100%;
-    /* 100px of height + 10px of border */
-    border-bottom-right-radius: 100%;
-    /* 100px of height + 10px of border */ }
-    /* line 17, sass/_whiteboard.scss */
-    .whiteboard .sticky i.addSticky {
-      font-size: 2em;
-      color: #888;
-      cursor: pointer; }
+  height: 100%;
+  overflow: hidden; }
 
-/* line 37, sass/_whiteboard.scss */
-.note {
+/* line 19, sass/_whiteboard.scss */
+#addNote {
+  position: absolute;
+  width: 6em;
+  height: 6em;
+  top: -2em;
+  left: 4em;
+  padding: 1em;
+  background: #334;
+  border-radius: 50%;
+  /* 100px of height + 10px of border */
+  border-radius: 50%;
+  /* 100px of height + 10px of border */ }
+  /* line 30, sass/_whiteboard.scss */
+  #addNote .fa {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em; }
+
+/* line 39, sass/_whiteboard.scss */
+.stickynote {
   display: block;
   position: absolute;
   z-index: 1;
@@ -94,70 +100,65 @@ table {
   transform: translate(-50%, -50%);
   max-width: 300px;
   max-height: 300px;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 150px;
+  min-height: 160px;
   padding: 0.5em;
   -moz-box-shadow: black 1px 1px 5px;
   -webkit-box-shadow: black 1px 1px 5px;
   box-shadow: black 1px 1px 5px;
-  border-radius: 5px; }
-  /* line 50, sass/_whiteboard.scss */
-  .note .page {
-    position: relative;
-    background: #FFA3CE; }
-    /* line 54, sass/_whiteboard.scss */
-    .note .page h1 {
-      font-family: "Satisfy", cursive;
-      font-weight: bold;
-      font-size: 1.5em;
-      padding: 0.25em;
-      display: block;
-      border-bottom: 1px solid #000;
-      text-align: center; }
-    /* line 64, sass/_whiteboard.scss */
-    .note .page .content {
-      padding: 0.5em;
-      text-align: center;
-      font-family: "Bad Script", cursive;
-      font-weight: bold; }
+  border-radius: 5px;
+  overflow-x: visible;
+  overflow-y: hidden;
+  background: #FFA3CE;
+  font-family: "Leckerli One", cursive; }
 
-/* line 74, sass/_whiteboard.scss */
-.note.active {
-  -moz-box-shadow: black 3px 2px 20px;
-  -webkit-box-shadow: black 3px 2px 20px;
-  box-shadow: black 3px 2px 20px;
-  z-index: 5; }
-
-/* line 80, sass/_whiteboard.scss */
-.note1 {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  max-width: 500px;
-  max-height: 500px;
-  min-width: 100px;
-  min-height: 100px;
-  padding: 0.5em;
-  -moz-box-shadow: black 1px 1px 5px;
-  -webkit-box-shadow: black 1px 1px 5px;
-  box-shadow: black 1px 1px 5px;
-  border-radius: 5px; }
-  /* line 91, sass/_whiteboard.scss */
-  .note1 .page {
-    position: relative;
-    background: #FFA3CE; }
-    /* line 95, sass/_whiteboard.scss */
-    .note1 .page h1 {
-      font-family: "Satisfy", cursive;
-      font-weight: bold;
-      font-size: 1.5em;
+/* line 62, sass/_whiteboard.scss */
+.stickynote.active {
+  -moz-box-shadow: black 3px 3px 20px;
+  -webkit-box-shadow: black 3px 3px 20px;
+  box-shadow: black 3px 3px 20px;
+  z-index: 2;
+  padding-right: 45px; }
+  /* line 67, sass/_whiteboard.scss */
+  .stickynote.active .control {
+    display: block;
+    width: 40px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #333;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px; }
+  /* line 80, sass/_whiteboard.scss */
+  .stickynote.active .controlElement {
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    font-family: FontAwesome;
+    cursor: pointer;
+    border-bottom: 1px dotted #888;
+    margin: 1px 2px; }
+  /* line 93, sass/_whiteboard.scss */
+  .stickynote.active .delete {
+    display: inline-block;
+    text-align-last: center;
+    line-height: 40px; }
+    /* line 97, sass/_whiteboard.scss */
+    .stickynote.active .delete:before {
+      content: "\f1f8";
+      color: white;
+      cursor: pointer;
       padding: 0.25em;
-      display: block;
-      border-bottom: 1px solid #000;
-      text-align: center; }
-    /* line 105, sass/_whiteboard.scss */
-    .note1 .page .content {
-      padding: 0.5em;
-      text-align: center;
-      font-family: "Bad Script", cursive;
-      font-weight: bold; }
+      font-size: 1.5em; }
+  /* line 106, sass/_whiteboard.scss */
+  .stickynote.active .colorElement {
+    border-radius: 50%;
+    background: white; }
+    /* line 109, sass/_whiteboard.scss */
+    .stickynote.active .colorElement:before {
+      content: " "; }
+
+/* line 116, sass/_whiteboard.scss */
+.control {
+  display: none; }
